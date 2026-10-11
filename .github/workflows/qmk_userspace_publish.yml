@@ -38,7 +38,8 @@ jobs:
         id: previoustag
         uses: 'WyriHaximus/github-action-get-previous-tag@v1'
         with:
-          pattern: r*[0-9]
+          prefix: r
+          fallback: r0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -50,7 +51,6 @@ jobs:
 
       - name: Generate Release
         uses: softprops/action-gh-release@v3
-        if: always() && !cancelled()
         with:
           token: ${{ github.token }}
           name: BastardKB Firmware release ${{ steps.next.outputs.version }}
