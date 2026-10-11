@@ -2,6 +2,6 @@
     "userspace_version": "1.0",
     "build_targets": [
         ["bastardkb/charybdis/3x6/splinktegrated_rev1", "dvorakes"],
-        ["bastardkb/charybdis/3x6_left/splinktegrated_rev1", "dvorakes"],
+        ["bastardkb/charybdis/3x6_left/splinktegrated_rev1", "dvorakes"]
     ]
 }
